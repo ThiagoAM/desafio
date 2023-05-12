@@ -18,55 +18,55 @@ struct UsersScreen: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                VStack {
+                List {
                     if usersViewModel.users.isEmpty && searchText.isEmpty {
-                        Text("Sorry, no users were found at the moment.")
-                            .padding(.horizontal)
-                        tryAgainButton
-                            .padding()
-                    }
-                    List {
-                        if !searchText.isEmpty {
-                            searchButton
-                        }
-                        ForEach(usersViewModel.users) { user in
-                            if user.wasSearched(in: searchText) || searchText.isEmpty {
-                                UserListView(user: user)
-                                    .onTapGesture {
-                                        userBeingShown = user
-                                    }
-                            }
+                        VStack {
+                            Text("Sorry, no users were found at the moment.")
+                                .padding(.horizontal)
+                            tryAgainButton
+                                .padding()
                         }
                     }
-                    .navigationTitle("GitHub Users")
-                    .onAppear {
-                        Task {
-                            isLoading = true
-                            try? await usersViewModel.loadUsers()
-                            isLoading = false
+                    if !searchText.isEmpty {
+                        searchButton
+                    }
+                    ForEach(usersViewModel.users) { user in
+                        if user.wasSearched(in: searchText) || searchText.isEmpty {
+                            UserListView(user: user)
+                                .onTapGesture {
+                                    userBeingShown = user
+                                }
                         }
                     }
-                    .searchable(
-                        text: $searchText,
-                        prompt: Text("Search by username"))
-                    .refreshable {
+                }
+                .navigationTitle("GitHub Users")
+                .onAppear {
+                    Task {
+                        isLoading = true
                         try? await usersViewModel.loadUsers()
+                        isLoading = false
                     }
-                    .sheet(item: $userBeingShown) { _ in
-                        UserDetailScreen(
-                            usersViewModel: usersViewModel,
-                            user: $userBeingShown)
-                    }
-                    .alert(isPresented: $searchUserErrorAlertShown) {
-                        Alert(
-                            title: Text("Something Went Wrong"),
-                            message: Text("We couldn't find the username you searched for. Please make sure the username exists or check your internet connection."),
-                            dismissButton: .default(Text("OK")))
-                    }
-                    if isLoading {
-                        ProgressView()
-                            .scaleEffect(2.0)
-                    }
+                }
+                .searchable(
+                    text: $searchText,
+                    prompt: Text("Search by username"))
+                .refreshable {
+                    try? await usersViewModel.loadUsers()
+                }
+                .sheet(item: $userBeingShown) { _ in
+                    UserDetailScreen(
+                        usersViewModel: usersViewModel,
+                        user: $userBeingShown)
+                }
+                .alert(isPresented: $searchUserErrorAlertShown) {
+                    Alert(
+                        title: Text("Something Went Wrong"),
+                        message: Text("We couldn't find the username you searched for. Please make sure the username exists or check your internet connection."),
+                        dismissButton: .default(Text("OK")))
+                }
+                if isLoading {
+                    ProgressView()
+                        .scaleEffect(2.0)
                 }
             }
         }
