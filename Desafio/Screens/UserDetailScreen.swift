@@ -50,10 +50,12 @@ struct UserDetailScreen: View {
                                 }
                             }
                         } else {
-                            VStack(alignment: .center) {
-                                Text("Oops! We encountered an issue while attempting to load the user's repositories. Please check your internet connection and try again.")
-                                    .padding()
-                                tryAgainButton
+                            if !isLoading {
+                                VStack(alignment: .center) {
+                                    Text("Oops! We encountered an issue while attempting to load the user's repositories. Please check your internet connection and try again.")
+                                        .padding()
+                                    tryAgainButton
+                                }
                             }
                         }
                     }
