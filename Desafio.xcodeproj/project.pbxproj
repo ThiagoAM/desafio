@@ -19,6 +19,7 @@
 		589C09D22A0C90F3007DB1AB /* UserDetailCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589C09D12A0C90F3007DB1AB /* UserDetailCardView.swift */; };
 		589C09D42A0C9798007DB1AB /* UserRepositoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589C09D32A0C9798007DB1AB /* UserRepositoryListView.swift */; };
 		589C09D62A0CA673007DB1AB /* DevShortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589C09D52A0CA673007DB1AB /* DevShortcuts.swift */; };
+		589CB8302A0DCBBA00743D50 /* GitHubUsersAPISlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589CB82F2A0DCBBA00743D50 /* GitHubUsersAPISlowTests.swift */; };
 		58DA1BC72A0C241A00C0DC72 /* Codable+FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DA1BC62A0C241A00C0DC72 /* Codable+FileManager.swift */; };
 		58DA1BC92A0C271200C0DC72 /* FMCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DA1BC82A0C271200C0DC72 /* FMCache.swift */; };
 		58DA1BCC2A0C278100C0DC72 /* DirectoryURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DA1BCB2A0C278100C0DC72 /* DirectoryURL.swift */; };
@@ -34,6 +35,16 @@
 		58E8160E2A0DB61D003A2395 /* GitHubUsersAPIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E8160D2A0DB61D003A2395 /* GitHubUsersAPIMock.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		589CB8312A0DCBBA00743D50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 58246A2B2A0C1EE20099771B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58246A322A0C1EE20099771B;
+			remoteInfo = Desafio;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		58246A332A0C1EE20099771B /* Desafio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Desafio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58246A362A0C1EE20099771B /* DesafioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioApp.swift; sourceTree = "<group>"; };
@@ -47,6 +58,8 @@
 		589C09D12A0C90F3007DB1AB /* UserDetailCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailCardView.swift; sourceTree = "<group>"; };
 		589C09D32A0C9798007DB1AB /* UserRepositoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryListView.swift; sourceTree = "<group>"; };
 		589C09D52A0CA673007DB1AB /* DevShortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevShortcuts.swift; sourceTree = "<group>"; };
+		589CB82D2A0DCBBA00743D50 /* DesafioUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesafioUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		589CB82F2A0DCBBA00743D50 /* GitHubUsersAPISlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUsersAPISlowTests.swift; sourceTree = "<group>"; };
 		58DA1BC62A0C241A00C0DC72 /* Codable+FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+FileManager.swift"; sourceTree = "<group>"; };
 		58DA1BC82A0C271200C0DC72 /* FMCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMCache.swift; sourceTree = "<group>"; };
 		58DA1BCB2A0C278100C0DC72 /* DirectoryURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryURL.swift; sourceTree = "<group>"; };
@@ -71,6 +84,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		589CB82A2A0DCBBA00743D50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				58246A352A0C1EE20099771B /* Desafio */,
+				589CB82E2A0DCBBA00743D50 /* DesafioUnitTests */,
 				58246A342A0C1EE20099771B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				58246A332A0C1EE20099771B /* Desafio.app */,
+				589CB82D2A0DCBBA00743D50 /* DesafioUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,6 +164,14 @@
 				589C09D32A0C9798007DB1AB /* UserRepositoryListView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		589CB82E2A0DCBBA00743D50 /* DesafioUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				589CB82F2A0DCBBA00743D50 /* GitHubUsersAPISlowTests.swift */,
+			);
+			path = DesafioUnitTests;
 			sourceTree = "<group>";
 		};
 		58DA1BC52A0C23F100C0DC72 /* Extensions */ = {
@@ -232,6 +262,24 @@
 			productReference = 58246A332A0C1EE20099771B /* Desafio.app */;
 			productType = "com.apple.product-type.application";
 		};
+		589CB82C2A0DCBBA00743D50 /* DesafioUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 589CB8352A0DCBBA00743D50 /* Build configuration list for PBXNativeTarget "DesafioUnitTests" */;
+			buildPhases = (
+				589CB8292A0DCBBA00743D50 /* Sources */,
+				589CB82A2A0DCBBA00743D50 /* Frameworks */,
+				589CB82B2A0DCBBA00743D50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				589CB8322A0DCBBA00743D50 /* PBXTargetDependency */,
+			);
+			name = DesafioUnitTests;
+			productName = DesafioUnitTests;
+			productReference = 589CB82D2A0DCBBA00743D50 /* DesafioUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -244,6 +292,10 @@
 				TargetAttributes = {
 					58246A322A0C1EE20099771B = {
 						CreatedOnToolsVersion = 14.3;
+					};
+					589CB82C2A0DCBBA00743D50 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 58246A322A0C1EE20099771B;
 					};
 				};
 			};
@@ -264,6 +316,7 @@
 			projectRoot = "";
 			targets = (
 				58246A322A0C1EE20099771B /* Desafio */,
+				589CB82C2A0DCBBA00743D50 /* DesafioUnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -275,6 +328,13 @@
 			files = (
 				58246A3E2A0C1EE30099771B /* Preview Assets.xcassets in Resources */,
 				58246A3B2A0C1EE30099771B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		589CB82B2A0DCBBA00743D50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +370,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		589CB8292A0DCBBA00743D50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				589CB8302A0DCBBA00743D50 /* GitHubUsersAPISlowTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		589CB8322A0DCBBA00743D50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 58246A322A0C1EE20099771B /* Desafio */;
+			targetProxy = 589CB8312A0DCBBA00743D50 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		58246A3F2A0C1EE30099771B /* Debug */ = {
@@ -483,6 +559,40 @@
 			};
 			name = Release;
 		};
+		589CB8332A0DCBBA00743D50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thiagoAM.DesafioUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Desafio.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Desafio";
+			};
+			name = Debug;
+		};
+		589CB8342A0DCBBA00743D50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thiagoAM.DesafioUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Desafio.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Desafio";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -500,6 +610,15 @@
 			buildConfigurations = (
 				58246A422A0C1EE30099771B /* Debug */,
 				58246A432A0C1EE30099771B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		589CB8352A0DCBBA00743D50 /* Build configuration list for PBXNativeTarget "DesafioUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				589CB8332A0DCBBA00743D50 /* Debug */,
+				589CB8342A0DCBBA00743D50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
