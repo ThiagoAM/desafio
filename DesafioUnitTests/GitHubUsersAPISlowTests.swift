@@ -28,4 +28,22 @@ final class GitHubUsersAPISlowTests: XCTestCase {
         // Then
         XCTAssert(!users.isEmpty)
     }
+    
+    func testLoadUserDetail() async throws {
+        // Given
+        // When
+        let userDetail = try await sut.loadUserDetail(with: "thiagoam")
+        // Then
+        XCTAssert(userDetail.name == "Thiago Anderson Martins")
+        XCTAssert(userDetail.login == "ThiagoAM")
+    }
+    
+    func testLoadUserRepositories() async throws {
+        // Given
+        // When
+        let userRepositories = try await sut.loadUserRepositories(with: "thiagoam")
+        // Then
+        XCTAssert(!userRepositories.isEmpty)
+        XCTAssert(userRepositories.compactMap({$0.name}).contains("Calculadora-Swift"))
+    }
 }
