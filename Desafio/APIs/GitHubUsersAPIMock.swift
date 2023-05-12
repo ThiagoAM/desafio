@@ -7,6 +7,8 @@
 
 import Foundation
 
+/// This class can be used when testing, and can be injected in
+/// `UsersViewModel` as a dependency.
 class GitHubUsersAPIMock: UserLoader {
     func loadUsers() async throws -> [User] {
         throw GitHubUsersError.unknown

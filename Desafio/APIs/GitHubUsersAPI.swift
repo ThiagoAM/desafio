@@ -8,6 +8,11 @@
 import Foundation
 import Alamofire
 
+/// Main source of data for this app. Loads user data from `api.github.com`,
+/// then caches it before returing the decoded data.
+/// - Check `FMCache.swift` for more info on the caching system.
+/// - Check `Alamofire+FMCache.swift` for more info on how the `AF.cachedRequest`
+///          methhod works.
 class GitHubUsersAPI: UserLoader {
     static let shared = GitHubUsersAPI()
     

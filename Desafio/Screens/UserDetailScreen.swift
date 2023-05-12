@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+/// Displays some details of a GitHub user.
+/// Features:
+/// - Displays some of the user's main informations
+/// - Lists the user's public repositories
 struct UserDetailScreen: View {
     @ObservedObject var usersViewModel: UsersViewModel
     

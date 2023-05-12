@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+/// View intended to be used as a card to display detailed
+/// information on a given `UserDetail`.
+/// Displays the full name, avatar and the count of public
+/// repos, followers and following.
 struct UserDetailCardView: View {
     let userDetail: UserDetail
     

@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+/// App's main screen.
+/// Features:
+/// - Lists some GitHub users (interactable)
+/// - Local and remote user search
+/// - Drag-down to update
 struct UsersScreen: View {
     @ObservedObject var usersViewModel: UsersViewModel
     

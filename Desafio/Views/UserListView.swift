@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+/// View intended to be used as a `List` item. Displays
+/// the avatar and the name of a given `User`.
 struct UserListView: View {
     let user: User
     

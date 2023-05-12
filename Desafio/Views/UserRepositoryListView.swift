@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+/// View intended to be used as a `List` item. Displays
+/// some repository data from a given `UserRepository`.
 struct UserRepositoryListView: View {
     let userRepository: UserRepository
     

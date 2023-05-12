@@ -7,7 +7,8 @@
 
 import Foundation
 
-class UsersViewModel: ObservableObject {
+/// ViewModel responsible for handling user related data.
+@MainActor class UsersViewModel: ObservableObject {
     static let shared = UsersViewModel()
     
     @Published private(set) var users: [User] = []

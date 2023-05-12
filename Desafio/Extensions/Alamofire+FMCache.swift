@@ -8,8 +8,8 @@
 import SwiftUI
 import Alamofire
 
-// MARK: - Codable
-
+/// Extends `Alamofire` with some convenient methods related to the
+/// `FMCache` caching system.
 extension Session {
     func cachedRequest<T: Codable>(using cache: FMCache<T>, url: String, parameters: [String: Any]? = nil, fileName: String, duration: CacheDuration = DevShortcuts.defaultCacheDuration) async throws -> T? {
         try await withCheckedThrowingContinuation { continuation in
