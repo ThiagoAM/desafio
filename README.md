@@ -29,3 +29,5 @@ Desafio Carrefour é um aplicativo desenvolvido usando SwiftUI e segue a arquite
 - **Tratamento de Erros das Chamadas**: O projeto implementa um tratamento de erros para lidar com situações em que as chamadas à API do GitHub falham. Isso inclui a exibição de mensagens de erro adequadas para os usuários e a apresentação de uma interface consistente em caso de falhas na comunicação.
 
 - **Sistema de Cache com FileManager para as Respostas das Requisições**: O aplicativo utiliza o `FileManager` para implementar um sistema de cache das respostas das requisições à API do GitHub. Isso permite que, em caso de problemas de conexão ou quando a mesma requisição é feita novamente, o aplicativo possa recuperar os dados a partir do cache local em vez de realizar uma nova chamada à API.
+
+- **Testes Unitários**: Alguns testes unitários básicos foram feitos para a classe `GitHubUsersAPI` no diretório `DesafioUnitTests`.
